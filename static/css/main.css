@@ -295,8 +295,8 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 }
 
 #about-us .block p {
-  color: #959595;
-  font-size: 16px;
+  color: #e94c3d;
+  font-size: 30px;
   line-height: 26px;
   padding: 40px 0px;
 }
@@ -336,6 +336,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   transition: all 0.8s ease-out;
   width: 100%;
   height: auto;
+  max-height: 300px; /* adjust as needed */
   object-fit: cover;
 }
 
@@ -394,7 +395,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   float: right;
   padding: 28px 102.5px;
   border-radius: 0px;
-  background: #ff530a;
+  background: #00209F;
   color: #fff;
   border: 1px solid transparent;
   text-transform: uppercase;
@@ -407,8 +408,8 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 
 #blog .block .btn-more-info:hover {
   background: transparent;
-  color: #ff530a;
-  border: 1px solid #ff530a;
+  color: #00209F;
+  border: 1px solid #00209F;
 }
 
 .blog-single-page .post-thumb {
@@ -501,7 +502,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 }
 
 #price .block .pricing-list .btn:hover {
-  background: #ff530a;
+  background: #00209F;
   color: #fff;
 }
 

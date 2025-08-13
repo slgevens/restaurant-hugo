@@ -1,6 +1,10 @@
 {{ if site.Data.homepage.blog.enable}}
 <section id="blog" {{ if site.Data.homepage.blog.overlay }} class="overlay" {{ end }}
-	style="background-image: url('{{ site.Data.homepage.blog.bg_image | absURL }}');">
+	style="background-image: url('{{ site.Data.homepage.blog.bg_image | absURL }}');
+           background-size: cover;
+           background-position: center center;
+           background-repeat: no-repeat;">
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
