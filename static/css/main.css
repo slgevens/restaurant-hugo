@@ -1,7 +1,8 @@
 /* var text-decoration */
-@font-face {
-  font-family: myfont;
-  src: url(../fonts/ufonts.com_tw-cen-mt.ttf);
+
+html,
+body {
+  font-family: "Noto Sans Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 /*--
@@ -21,7 +22,6 @@
 }
 
 body {
-  font-family: myfont;
   font-size: 14px;
   font-weight: 400;
 }
@@ -36,12 +36,16 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Noto Sans Display", sans-serif;
   margin: 0px;
-  font-family: myfont;
 }
 
 h1 {
-  font-size: 36px;
+  font-family: "Noto Sans Display", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -59,7 +63,6 @@ p {
   font-weight: 400;
   line-height: 20px;
   margin: 0px;
-  font-family: myfont;
 }
 
 ul {
@@ -110,7 +113,7 @@ a:active {
 }
 
 .heading span {
-  font-size: 45px;
+  font-size: 50px;
   color: #ff530a;
   font-weight: 600;
 }
@@ -161,9 +164,7 @@ a:active {
 }
 
 /*============== Mixins style close ================*/
-/*--
-    header-img start Start
---*/
+/*-- header-img start Start --*/
 .overlay {
   position: relative;
 }
@@ -180,10 +181,9 @@ a:active {
   background: url("../images/overlay-pattern.png") #000000;
   opacity: 0.3;
 }
+/*-- header-img start End --*/
 
-/*--
-    nav Start
---*/
+/*-- nav Start --*/
 .navigation {
   position: sticky;
   top: 85px;
@@ -216,15 +216,16 @@ nav .block .navbar-default .navbar-nav {
   padding-top: 10px;
 }
 
-nav .block .navbar-default .navbar-nav > li > a {
-  color: #2e2e2e;
+nav .block .navbar-default .navbar-nav>li>a {
+  color: #f6bb1b;
+  font-weight: 500;
   padding: 10px 0px;
   margin: 0px 15px;
   font-size: 15px;
   text-transform: uppercase;
 }
 
-nav .block .navbar-default .navbar-nav > li > a:before {
+nav .block .navbar-default .navbar-nav>li>a:before {
   background-color: transparent;
   content: "";
   position: absolute;
@@ -238,19 +239,19 @@ nav .block .navbar-default .navbar-nav > li > a:before {
   width: 0;
 }
 
-nav .block .navbar-default .navbar-nav > li > a:hover:before {
+nav .block .navbar-default .navbar-nav>li>a:hover:before {
   background-color: #e94c3d;
   content: "";
   width: 100%;
 }
 
-nav .block .navbar-default .navbar-nav > li.current > a {
+nav .block .navbar-default .navbar-nav>li.current>a {
   color: #2e2e2e;
   padding: 10px 0px;
   margin: 0px 15px;
 }
 
-nav .block .navbar-default .navbar-nav > li.current > a:before {
+nav .block .navbar-default .navbar-nav>li.current>a:before {
   background-color: transparent;
   content: "";
   position: absolute;
@@ -265,15 +266,15 @@ nav .block .navbar-default .navbar-nav > li.current > a:before {
   background-color: #e94c3d;
 }
 
-nav .block .navbar-default .navbar-nav > .active > a,
-nav .block .navbar-default .navbar-nav > .active > a:focus,
-nav .block .navbar-default .navbar-nav > .active > a:hover {
+nav .block .navbar-default .navbar-nav>.active>a,
+nav .block .navbar-default .navbar-nav>.active>a:focus,
+nav .block .navbar-default .navbar-nav>.active>a:hover {
   background: none;
 }
 
-nav .block .navbar-default .navbar-nav > .active > a:before,
-nav .block .navbar-default .navbar-nav > .active > a:focus:before,
-nav .block .navbar-default .navbar-nav > .active > a:hover:before {
+nav .block .navbar-default .navbar-nav>.active>a:before,
+nav .block .navbar-default .navbar-nav>.active>a:focus:before,
+nav .block .navbar-default .navbar-nav>.active>a:hover:before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -281,10 +282,9 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   height: 2px;
   background: #ff5333;
 }
+/*-- nav End --*/
 
-/*--
-    about-us Start
---*/
+/*-- about-us Start --*/
 #about-us {
   padding: 100px 0px;
   background: #f6f6f6;
@@ -295,15 +295,16 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 }
 
 #about-us .block p {
-  color: #e94c3d;
+  color: #0d5531;
   font-size: 30px;
+  font-weight: 600;
   line-height: 26px;
   padding: 40px 0px;
 }
 
-/*--
-    blog Start
---*/
+/*-- about-us End --*/
+
+/*-- blog Start --*/
 #blog {
   padding-top: 75px;
   padding-bottom: 100px;
@@ -336,7 +337,6 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   transition: all 0.8s ease-out;
   width: 100%;
   height: auto;
-  max-height: 300px; /* adjust as needed */
   object-fit: cover;
 }
 
@@ -382,13 +382,19 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 }
 
 .post-content h3 a {
-  color: #323232;
-  font-size: 20px;
+  color: #f6bb1b;
+  font-size: 25px;
   display: block;
 }
 
 .post-content h3 a:hover {
   color: #ff5333;
+}
+
+.post-content p {
+  color: #0d5531;
+  font-size: 16px;
+  display: block;
 }
 
 #blog .block .btn-more-info {
@@ -418,10 +424,48 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 
 .blog-single-page .post-title {
   margin-bottom: 10px;
+  font-size: 4rem;
+  color: #f6bb1b;
 }
 
 .blog-single-page .post-meta {
   margin-bottom: 20px;
+}
+
+/* Desktop default */
+.blog-single-page .post-single-content p {
+  color: #0d5531;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .blog-single-page .post-single-content p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .blog-single-page .post-single-content p {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.6;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .blog-single-page .post-single-content p {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.6;
+  }
 }
 
 .mx-auto {
@@ -429,23 +473,54 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   margin-right: auto;
 }
 
-/*--
-    price Start
---*/
+.menu-price-buttons {
+  margin-top: 3rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+}
+.menu-price-buttons .btn.btn-primary {
+  background-color: #f6bb1b !important;
+  border-color: #f6bb1b !important;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  border-radius: 40px;
+}
+.menu-price-buttons .btn.btn-primary:hover {
+  background-color: #cb2a27 !important;;
+  border-color: #cb2a27 !important;;
+}
+
+/*-- blog End --*/
+
+/*-- price Start --*/
 #price {
   padding: 70px 0px;
 }
 
 #price .block > p {
-  color: #9d9d9d;
-  font-size: 16px;
+  color: #0d5531;
+  font-size: 25px;
+  font-weight: 600;
   line-height: 26px;
-  padding: 40px 133px 0;
+  padding: 20px 133px 0;
   text-align: center;
 }
 
+#price .block h2 {
+  font-size: 30px;
+  color: #f6bb1b;
+  font-weight: 600;
+}
+#price .block h3 {
+  font-size: 30px;
+  color: #f6bb1b;
+  font-weight: 600;
+}
+
 #price .block .pricing-list {
-  padding-top: 85px;
+  padding-top: 35px;
 }
 
 #price .block .pricing-list ul {
@@ -459,6 +534,8 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 
 #price .block .pricing-list ul li .item .item-title {
   position: relative;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 #price .block .pricing-list ul li .item .item-title h2 {
@@ -479,12 +556,13 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 
 #price .block .pricing-list ul li .item .item-title span {
   float: right;
-  color: #938463;
+  color: #f6bb1b;
 }
 
 #price .block .pricing-list ul li .item p {
   padding: 12px 0 0px;
-  color: #949494;
+  font-size: 18px;
+  color: #0d5531;
 }
 
 #price .block .pricing-list .btn {
@@ -505,10 +583,9 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   background: #00209F;
   color: #fff;
 }
+/*-- price End --*/
 
-/*--
-    subscribe Start
---*/
+/*-- subscribe Start --*/
 .subscription-form #mc_embed_signup {
   background: none;
   width: 70%;
@@ -553,18 +630,22 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   -o-transition: 0.3s all;
   transition: 0.3s all;
 }
+
 @media only screen and (max-width: 991px) {
   #mc_embed_signup .mc-field-group input.email {
     width: 70%;
   }
+
   #mc_embed_signup .mc-field-group input.button {
     width: 30%;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .mc-field-group .d-flex {
     display: block;
   }
+
   #mc_embed_signup .mc-field-group input.email,
   #mc_embed_signup .mc-field-group input.button {
     width: 100%;
@@ -585,6 +666,8 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 }
 
 #subscribe .block h1.heading {
+  font-family: "Noto Sans Display", sans-serif;
+  margin-bottom: 0;
   color: #fff;
 }
 
@@ -885,7 +968,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   margin-top: 20px;
 }
 
-.pagination > li {
+.pagination>li {
   display: inline-block;
 }
 
